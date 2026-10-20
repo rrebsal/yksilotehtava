@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruokkis</title>
+  <link href="main.css" rel="stylesheet">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Ruokkis</h1>
+    <div id="whoami"></div>
+  </header>
+
+  <main>
+    <section id="my-spot"></section>
+
+    <section>
+      <h2>Kaikki Ravintolat</h2>
+      <div id="chip-row">
+        <button id="only-sodexo" type="button">Sodexo</button>
+        <button id="only-compass" type="button">Compass Group</button>
+        <button id="all-places" type="button" class="on">Näytä Kaikki</button>
+        <input id="finder" type="search" placeholder="Search name, address or city">
+      </div>
+      <p class="quiet"><span id="how-many"></span> <span id="sort-note"></span></p>
+      <div class="scroll-box">
+        <table id="lunch-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Nimi</th>
+              <th>Osoite</th>
+              <th>Kaupunki</th>
+              <th>Firma</th>
+              <th>Etäisyys</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="lunch-dialog"></dialog>
+
+  <dialog id="door">
+    <form id="door-form">
+      <h3 id="door-title">Kirjaudu</h3>
+      <label>Käyttäjänimi
+        <input id="door-name" type="text" autocomplete="username" required>
+      </label>
+      <label>Salasana
+        <input id="door-pass" type="password" autocomplete="current-password" required>
+      </label>
+      <p id="door-oops" class="oops"></p>
+      <div class="button-row">
+        <button id="door-go" type="submit">Kirjaudu</button>
+        <button id="door-back" type="button">Peruuta</button>
+      </div>
+      <button id="door-swap" type="button" class="text-link"></button>
+    </form>
+  </dialog>
+</body>
+
+</html>
